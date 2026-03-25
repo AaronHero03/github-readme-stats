@@ -914,7 +914,7 @@ const renderTopLanguages = (topLangs, options = {}) => {
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
-      .stat { font-size:12px; }
+      .stat { font-size:10px; }
     }
     .bold { font-weight: 700 }
     .lang-name {
