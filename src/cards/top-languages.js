@@ -12,7 +12,7 @@ import {
 } from "../common/render.js";
 import { langCardLocales } from "../translations.js";
 
-const DEFAULT_CARD_WIDTH = 280;
+const DEFAULT_CARD_WIDTH = 400;
 const MIN_CARD_WIDTH = 260;
 const DEFAULT_LANG_COLOR = "#858585";
 const CARD_PADDING = 30;
@@ -910,17 +910,18 @@ const renderTopLanguages = (topLangs, options = {}) => {
       }
     }
     .stat {
-      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${colors.textColor};
+      font: 600 18px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif;
+    }
+
+    .lang-name {
+      font: 400 14px "Segoe UI", Ubuntu, Sans-Serif;
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
       .stat { font-size:10px; }
     }
     .bold { font-weight: 700 }
-    .lang-name {
-      font: 400 11px "Segoe UI", Ubuntu, Sans-Serif;
-      fill: ${colors.textColor};
-    }
+
     .stagger {
       opacity: 0;
       animation: fadeInAnimation 0.3s ease-in-out forwards;
