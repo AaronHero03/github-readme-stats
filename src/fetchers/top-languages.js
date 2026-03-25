@@ -6,7 +6,7 @@ import { excludeRepositories } from "../common/envs.js";
 import { CustomError, MissingParamError } from "../common/error.js";
 import { wrapTextMultiline } from "../common/fmt.js";
 import { request } from "../common/http.js";
-import languageColors from "../common/languageColors.json" assert { type: "json" };
+import languageColors from "../common/languageColors.js";
 
 /**
  * Top languages fetcher object.
@@ -135,7 +135,7 @@ const fetchTopLanguages = async (
         ...acc,
         [prev.node.name]: {
           name: prev.node.name,
-          color: prev.node.color,
+          color: languageColors[prev.node.name] || prev.node.color,
           size: langSize,
           count: repoCount,
         },
